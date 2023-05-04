@@ -14,23 +14,27 @@
     <div id="container">
         <main>
             <section id="input">
-                <p>
-                    <label for="ianoNascimento">Ano de nascimento: </label>
-                    <input type="number" name="anoNascimento" id="ianoNascimento">
-                </p>
-                <p>
-                    Sexo:
-                    <input type="radio" name="sexo" id="isxmas" value="M">
-                    <label for="isxmas">Masculino</label>
-                    <input type="radio" name="sexo" id="isxfem" value="F">
-                    <label for="isxfem">Feminino</label>
-                </p>
-                <p>
-                    <input type="button" value="Verificar">
-                </p>
+                <form action="cadastro.php" method="post">
+                    <p>
+                        <label for="ianoNascimento">Ano de nascimento: </label>
+                        <input type="number" name="anoNascimento" id="ianoNascimento" required value="2000" min="1900">
+                    </p>
+                    <p>
+                        Sexo:
+                        <input type="radio" name="sexo" id="isxmas" value="M" required>
+                        <label for="isxmas">Masculino</label>
+                        <input type="radio" name="sexo" id="isxfem" value="F" required>
+                        <label for="isxfem">Feminino</label>
+                    </p>
+                    <p>
+                        <input type="button" value="Verificar" onclick="calcularIdade()" id="btn">
+                    </p>
+                </form>
             </section>
             <section id="txt"></section>
-            <section id="img"></section>
+            <div id="container-img">
+                <section id="img"></section>
+            </div>
         </main>
     </div>
     <footer>
